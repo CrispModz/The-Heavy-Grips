@@ -70,7 +70,7 @@ void loop() {
     #if USING_FORCE_FEEDBACK
       char received[100];
       if (comm->readData(received)){
-        int hapticLimits[5];
+        int hapticLimits[6];
         //This check is a temporary hack to fix an issue with haptics on v0.5 of the driver, will make it more snobby code later
         if(String(received).length() >= 10) {
            decodeData(received, hapticLimits);
